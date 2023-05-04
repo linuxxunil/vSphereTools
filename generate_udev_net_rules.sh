@@ -6,6 +6,8 @@ if [ -f $rulesConfig ] ; then
 	exit 0
 fi
 
+yum install -y pciutils
+
 pci_dir=/sys/bus/pci/devices
 
 addToUdevRules() {
